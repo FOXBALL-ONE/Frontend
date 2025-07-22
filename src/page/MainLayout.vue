@@ -4,7 +4,7 @@
     <SiderMenu/>
 
     <a-layout>
-      <Header/>
+      <!--      <Header/>-->
 
       <a-layout-content style="margin: 0 16px">
         <router-view/>
@@ -19,7 +19,6 @@
 import SiderMenu from "@/components/layout/SiderMenu.vue";
 import {RouterView} from "vue-router";
 import Footer from "@/components/layout/Footer.vue";
-import Header from "@/components/layout/Header.vue";
 </script>
 
 <style scoped>

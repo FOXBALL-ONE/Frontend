@@ -27,6 +27,11 @@ const router = createRouter({
                         requiresAuth: true // 需要登录才能访问
                     },
                 }, {
+                    path: "test",
+                    component: () => import("@/Home/HomePage.vue"),
+                },
+
+                {
                     path: "order",
                     children: [
                         {
@@ -98,14 +103,14 @@ const router = createRouter({
     ]
 })
 
-router.beforeEach((to, from, next) => {
-    if (to.meta.requiresAuth && isUserLoggedIn()) {
-        alert("请先登录");
-        next({path: "/login"}); // 重定向到登录页
-    } else {
-        next();
-    }
-});
+// router.beforeEach((to, from, next) => {
+//     if (to.meta.requiresAuth && isUserLoggedIn()) {
+//         alert("请先登录");
+//         next({path: "/login"}); // 重定向到登录页
+//     } else {
+//         next();
+//     }
+// });
 
 function isUserLoggedIn() {
     // 根据实际情况判断是否登录，可以从浏览器的 localStorage 或其他地方获取登录信息

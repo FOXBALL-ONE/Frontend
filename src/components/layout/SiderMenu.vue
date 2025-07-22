@@ -42,37 +42,41 @@ const items = reactive([
   {
     key: '1',
     icon: () => h(PieChartOutlined),
-    label: '预约简略信息',
-    title: '预约简略信息',
+    label: '首页',
+    title: '首页',
     route: '/home/summary',
-  },
-  {
+  }, {
     key: '2',
     icon: () => h(DesktopOutlined),
-    label: '预约管理',
-    title: '预约管理',
+    label: '悬赏',
+    title: '悬赏',
     children: [{
       key: 'classroom',
-      label: '教室空闲预览',
-      title: '教室空闲预览',
+      label: '悬赏市场',
+      title: '悬赏市场',
       route: '/home/order/ClassroomIdle',
     }, {
       key: 'order1',
-      label: '申请预约',
-      title: '申请预约',
+      label: '发布悬赏',
+      title: '发布悬赏',
       route: '/home/order/RequestAppointment',
     },
       {
         key: 'order2',
-        label: '预约记录',
-        title: '预约记录',
+        label: '取消悬赏',
+        title: '取消悬赏',
         route: '/home/order/AppointmentRecord',
       },
       {
         key: 'order3',
-        label: '预约审核',
-        title: '预约审核',
+        label: '搜索悬赏',
+        title: '搜索悬赏',
         disabled: getRoleIsAdmin(),
+        route: '/home/order/AppointmentCheck',
+      }, {
+        key: 'order4',
+        label: '我的悬赏',
+        title: '我的悬赏',
         route: '/home/order/AppointmentCheck',
       }
     ],
@@ -80,43 +84,33 @@ const items = reactive([
   {
     key: '4',
     icon: () => h(DesktopOutlined),
-    label: '实验室管理',
-    title: '实验室管理',
+    label: '二手市场',
+    title: '二手市场',
     disabled: getRoleIsAdmin(),
     children: [{
       key: 'labadd',
-      label: '实验室列表',
-      title: '实验室列表',
+      label: '市场',
+      title: '市场',
       route: '/home/lab/list',
     }, {
       key: 'lab2',
-      label: '新增实验室',
-      title: '新增实验室',
+      label: '新增二手物品',
+      title: '新增二手物品',
       route: '/home/lab/add',
     }, {
       key: 'lab3',
-      label: '更新实验室信息',
-      title: '更新实验室信息',
+      label: '搜索二手物品',
+      title: '搜索二手物品',
       route: '/home/lab/update',
     }, {
       key: 'login',
-      label: '维护管理',
-      title: '维护管理',
+      label: '订单管理',
+      title: '订单管理',
       children: [{
         key: 'login1',
-        label: '维护记录',
-        title: '维护记录',
+        label: '订单列表',
+        title: '订单列表',
         route: '/home/lab/maintain/list',
-      }, {
-        key: 'login2',
-        label: '新增维护记录',
-        title: '新增维护记录',
-        route: '/home/lab/maintain/add',
-      }, {
-        key: 'login3',
-        label: '删除维护记录',
-        title: '删除维护记录',
-        route: '/home/lab/maintain/dele',
       }]
     }]
   },
@@ -136,9 +130,9 @@ const items = reactive([
         label: '修改密码',
         title: '修改密码',
         route: '/home/user/changepassword',
-      },
-    ],
-  },
+      }
+    ]
+  }
 ]);
 
 const handleMenuClick = ({key}: { key: string }) => {
