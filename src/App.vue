@@ -1,15 +1,15 @@
 <template>
-
-  <RouterView></RouterView>
+  <MainLayout/>
 </template>
 
 <script lang="ts">
 
 import {defineComponent} from "vue";
 import {RouterView} from "vue-router";
+import MainLayout from "@/page/MainLayout.vue";
 
 export default defineComponent({
-  components: {RouterView}
+  components: {MainLayout, RouterView}
 })
 
 </script>
