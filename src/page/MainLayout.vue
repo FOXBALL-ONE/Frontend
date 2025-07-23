@@ -1,38 +1,40 @@
 <template>
-  <a-layout style="min-height: 100vh">
+  <a-layout class="layout page-container">
+    <Header/>
+    <a-layout-content style="padding: 0 50px">
 
-    <SiderMenu/>
+      <BountySearch/>
 
-    <a-layout>
-      <!--      <Header/>-->
-
-      <a-layout-content style="margin: 0 16px">
-        <router-view/>
-      </a-layout-content>
-
-      <Footer/>
-
-    </a-layout>
+    </a-layout-content>
+    <Footer/>
   </a-layout>
 </template>
+
 <script lang="ts" setup>
-import SiderMenu from "@/components/layout/SiderMenu.vue";
-import {RouterView} from "vue-router";
 import Footer from "@/components/layout/Footer.vue";
+import Header from "@/components/layout/Header.vue";
+import BountySearch from "@/page/Bounty/BountySearch.vue";
 </script>
 
 <style scoped>
-#components-layout-demo-side .logo {
-  height: 32px;
-  margin: 16px;
-  background: rgba(255, 255, 255, 0.3);
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 确保容器至少占满视口高度 */
 }
 
-.site-layout .site-layout-background {
-  background: #fff;
+a-layout-content {
+  flex: 1; /* 让内容区域自动填充剩余空间 */
 }
 
-[data-theme='dark'] .site-layout .site-layout-background {
-  background: #141414;
+:deep(.slick-slide h3) {
+  color: #fff;
+}
+
+.autopl {
+  height: 300px;
+  width: 100%;
+  background: blue;
 }
 </style>
