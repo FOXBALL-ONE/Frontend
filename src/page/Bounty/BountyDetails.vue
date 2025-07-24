@@ -12,6 +12,7 @@
         <a-card-meta
             :description=bounty.description
             :title=bounty.title
+            :ex
         />
       </div>
     </div>
