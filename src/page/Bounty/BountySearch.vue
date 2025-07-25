@@ -2,9 +2,9 @@
   <a-space direction="vertical">
     <a-input-search
         v-model:value="value"
-        bordered="true"
+        :bordered="true"
         enter-button
-        maxlength="10"
+        :maxlength="10"
         placeholder="input search text"
         @search="onSearch"
     />

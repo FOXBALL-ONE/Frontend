@@ -1,5 +1,5 @@
 <template>
-  <MainLayout/>
+  <RouterView></RouterView>
 </template>
 
 <script lang="ts">

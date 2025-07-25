@@ -3,7 +3,7 @@
     <Header/>
     <a-layout-content style="padding: 0 50px">
 
-      <BountySearch/>
+      <router-view/>
 
     </a-layout-content>
     <Footer/>
@@ -13,7 +13,6 @@
 <script lang="ts" setup>
 import Footer from "@/components/layout/Footer.vue";
 import Header from "@/components/layout/Header.vue";
-import BountySearch from "@/page/Bounty/BountySearch.vue";
 </script>
 
 <style scoped>
@@ -32,9 +31,4 @@ a-layout-content {
   color: #fff;
 }
 
-.autopl {
-  height: 300px;
-  width: 100%;
-  background: blue;
-}
 </style>

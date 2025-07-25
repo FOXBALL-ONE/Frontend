@@ -2,8 +2,11 @@
 import {h, ref} from 'vue';
 import {AppstoreOutlined, MailOutlined, SettingOutlined} from '@ant-design/icons-vue';
 import type {MenuProps} from 'ant-design-vue';
+import router from "@/router";
 
 const current = ref<string[]>(['mail']);
+
+
 const items = ref<MenuProps['items']>([
   {
     key: 'Home',
@@ -46,11 +49,6 @@ const items = ref<MenuProps['items']>([
             label: '我的发布',
             title: '我的发布',
             key: 'myPush',
-          },
-          {
-            label: '我的评论',
-            title: '我的评论',
-            key: 'myComment',
           }
         ]
       }
@@ -59,17 +57,39 @@ const items = ref<MenuProps['items']>([
   {
     key: 'comminicate',
     icon: () => h(SettingOutlined),
-    label: '交流',
-    title: '交流',
+    label: '二手市场',
+    title: '二手市场',
     children: [
       {
-        label: '板块',
-        key: 'plate',
+        label: '总览',
+        key: 'Marketplate',
       },
       {
         label: '搜索',
-        key: 'plateSearch',
+        key: 'MarketSearch',
       },
+      {
+        label: '发布',
+        key: 'MarketPublish',
+      },
+      {
+        label: '我的',
+        key: 'MarketMy',
+        children: [
+          {
+            label: '我的订单',
+            key: 'MarketMyOrder',
+          },
+          {
+            label: '我的发布',
+            key: 'MarketMyPush',
+          },
+          {
+            label: '我的评论',
+            key: 'MarketMyComment',
+          }
+        ]
+      }
     ],
   },
   {
@@ -101,11 +121,36 @@ const items = ref<MenuProps['items']>([
     ],
   },
 ]);
+
+// key 与路由路径的映射
+const keyToRoute: Record<string, string> = {
+  Home: '/home/front_page',
+  bountyMarket: '/home/bounty/market',
+  search: '/home/bounty/search',
+  publish: '/home/bounty/publish',
+  myOrder: '/home/bounty/my/myOrder',
+  myPush: '/home/bounty/my/myPublish',
+  userCenter: '/home/user/userCenter',
+  changePassword: '/home/user/changePassword',
+  myPost: '/home/user/bounty',
+  myComment: '/home/user/order',
+  // 其他 key 映射...
+};
+
+// 菜单点击事件
+const onMenuClick: MenuProps['onClick'] = (info) => {
+  const route = keyToRoute[info.key as string];
+  if (route) {
+    router.push(route);
+  }
+};
 </script>
 <template>
   <a-layout-header style="background: aliceblue">
     <div class="logo"/>
-    <a-menu v-model:selectedKeys="current" :items="items" mode="horizontal"/>
+    <a-menu v-model:selectedKeys="current" :items="items" mode="horizontal"
+            @click="onMenuClick"
+    />
   </a-layout-header>
 </template>
 
