@@ -1,17 +1,4 @@
 <template>
-  <a-card style="display: flex; justify-content: center;">
-    <a-space direction="horizontal">
-      <a-button type="primary" @click="$router.push('/bounty/publish')">
-        所有订单
-      </a-button>
-      <a-button type="primary" @click="$router.push('/bounty/publish')">
-        未支付订单
-      </a-button>
-      <a-button type="primary" @click="$router.push('/bounty/publish')">
-        已支付订单
-      </a-button>
-    </a-space>
-  </a-card>
   <a-card>
     <a-list
         :data-source="data"
@@ -26,7 +13,7 @@
             </template>
 
             <template #title>
-              <a href="https://www.antdv.com/">{{ item.title }}</a>
+              <a :href=item.url>{{ item.title }}</a>
             </template>
             <template #avatar>
               <a-avatar src="https://joeschmoe.io/api/v1/random"/>
@@ -42,6 +29,7 @@ interface DataItem {
   key: number;
   title: string;
   description?: string;
+  url?: string;
 }
 
 const data: DataItem[] = [
@@ -50,6 +38,7 @@ const data: DataItem[] = [
     title: 'Ant Design Title 1',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team1',
+    url: 'https://www.baidu.com/',
   },
   {
     key: 2,
@@ -62,58 +51,77 @@ const data: DataItem[] = [
     title: 'Ant Design Title 3',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
   {
     key: 4,
     title: 'Ant Design Title 4',
     description:
         'Ant Design, a design language for background applications, is refined by Ant UED Team',
+    url: 'https://www.antdv.com/',
+
   },
 ];
-
 </script>
+
+
 <style scoped>
 
 </style>
