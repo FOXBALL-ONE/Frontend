@@ -83,10 +83,6 @@ const items = ref<MenuProps['items']>([
           {
             label: '我的发布',
             key: 'MarketMyPush',
-          },
-          {
-            label: '我的评论',
-            key: 'MarketMyComment',
           }
         ]
       }
@@ -134,7 +130,16 @@ const keyToRoute: Record<string, string> = {
   changePassword: '/home/user/changePassword',
   myPost: '/home/user/bounty',
   myComment: '/home/user/order',
-  // 其他 key 映射...
+  Marketplate: '/home/second_hand/market',
+  MarketSearch: '/home/second_hand/search',
+  MarketPublish: '/home/second_hand/publish',
+  MarketMy: '/home/second_hand/my',
+  MarketMyOrder: '/home/second_hand/my/myorder',
+  MarketMyPush: '/home/second_hand/my/mypublish',
+  MarketMyComment: '/home/second_hand/my/myComment',
+
+  logout: '/logout',
+
 };
 
 // 菜单点击事件

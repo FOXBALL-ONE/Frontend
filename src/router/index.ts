@@ -50,16 +50,33 @@ const router = createRouter({
                             ]
                         },
                     ]
+                }, {
+                    path: "second_hand",
+                    children: [
+                        {
+                            path: "market",
+                            component: () => import("@/page/SecondHand/SecondHandMarket.vue"),
+                        }, {
+                            path: "search",
+                            component: () => import("@/page/SecondHand/SecondHandSearch.vue")
+                        }, {
+                            path: "publish",
+                            component: () => import("@/page/SecondHand/SecondHandPublish.vue")
+                        }, {
+                            path: "my",
+                            children: [{
+                                path: "myorder",
+                                component: () => import("@/page/SecondHand/My/MyOrder.vue")
+                            }, {
+                                path: "mypublish",
+                                component: () => import("@/page/SecondHand/My/MyPublish.vue")
+                            }]
+                        }
+                    ]
+
+
                 },
-                // {
-                //     path: "comminicate",
-                //     children: [
-                //         {
-                //             path: "Marketplate",
-                //             component: () => import("@/page/lab/List.vue")
-                //         },
-                //     ]
-                // },
+
                 {
                     path: "user",
                     children: [{
