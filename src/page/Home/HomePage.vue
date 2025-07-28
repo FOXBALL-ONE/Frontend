@@ -1,9 +1,12 @@
 <template>
   <div class="home-container">
-    <a-carousel autoplay style="background: blue; height: 500px ">
-      <div><h3>1</h3></div>
-      <div><h3>2</h3></div>
-      <div><h3>3</h3></div>
+    <a-carousel autoplay style="background: blue; height: 600px ">
+      <a-image
+          preview={false}
+          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          style="width: 50%; height: 20px; "
+      />
+
       <div><h3>4</h3></div>
     </a-carousel>
 
@@ -42,33 +45,33 @@ interface DataItem {
 const data: DataItem[] = [
   {
     key: 1,
-    title: 'Ant Design Title 1',
+    title: '欢迎使用本系统',
     description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team1',
+        '本系统是一个二手交易平台，旨在为用户提供一个便捷的交易环境',
   },
   {
     key: 2,
-    title: 'Ant Design Title 2',
+    title: '欢迎使用本系统',
     description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
+        '本系统是一个二手交易平台，旨在为用户提供一个便捷的交易环境',
   },
   {
     key: 3,
-    title: 'Ant Design Title 3',
+    title: '欢迎使用本系统',
     description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
+        '本系统是一个二手交易平台，旨在为用户提供一个便捷的交易环境',
   },
   {
     key: 4,
-    title: 'Ant Design Title 4',
+    title: '欢迎使用本系统',
     description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
+        '本系统是一个二手交易平台，旨在为用户提供一个便捷的交易环境',
   },
   {
     key: 4,
-    title: 'Ant Design Title 4',
+    title: '欢迎使用本系统',
     description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
+        '本系统是一个二手交易平台，旨在为用户提供一个便捷的交易环境',
   },
   {
     key: 4,

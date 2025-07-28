@@ -1,105 +1,138 @@
-<script lang="ts" setup>
-interface DataItem {
-  key: number;
-  title: string;
-  description?: string;
-}
-
-const data: DataItem[] = [
-  {
-    key: 1,
-    title: 'Ant Design Title 1',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team1',
-  },
-  {
-    key: 2,
-    title: 'Ant Design Title 2',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 3,
-    title: 'Ant Design Title 3',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-  {
-    key: 4,
-    title: 'Ant Design Title 4',
-    description:
-        'Ant Design, a design language for background applications, is refined by Ant UED Team',
-  },
-];
-</script>
-
 <template>
-  <a-list
-      :data-source="data"
-      class="full-height-list"
-      item-layout="horizontal"
-  >
-    <template #renderItem="{ item }">
-      <a-list-item style="height: 100px">
-        <a-list-item-meta>
-          <template #description>
-            {{ item.description }}{{ item.key }}
-          </template>
+  <a-space :size="[16, 16]" style="width: 100%" wrap>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
 
-          <template #title>
-            <a href="https://www.antdv.com/">{{ item.title }}</a>
-          </template>
-          <template #avatar>
-            <a-avatar src="https://joeschmoe.io/api/v1/random"/>
-          </template>
-        </a-list-item-meta>
-      </a-list-item>
-    </template>
-  </a-list>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+    <a-card hoverable style="width: 240px">
+      <template #cover>
+        <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+      </template>
+      <a-card-meta title="Europe Street beat">
+        <template #description>www.instagram.com</template>
+      </a-card-meta>
+    </a-card>
+
+
+  </a-space>
 </template>
 
-<style scoped>
-
-</style>
+<script lang="ts" setup>
+</script>

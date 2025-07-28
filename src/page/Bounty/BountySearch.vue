@@ -7,7 +7,7 @@
           :maxlength="10"
           class="search-input"
           enter-button
-          placeholder="input search text"
+          placeholder="请输入搜索内容"
           @search="onSearch"
       />
     </a-space>

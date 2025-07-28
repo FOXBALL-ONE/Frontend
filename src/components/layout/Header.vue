@@ -101,13 +101,6 @@ const items = ref<MenuProps['items']>([
       {
         label: '修改密码',
         key: 'changePassword',
-      }, {
-        label: '我的帖子',
-        key: 'myPost',
-      },
-      {
-        label: '我的订单',
-        key: 'myComment',
       },
 
       {
