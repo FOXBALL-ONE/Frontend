@@ -1,38 +1,49 @@
 <template>
   <div class="home-container">
-    <a-carousel autoplay style="background: blue; height: 600px ">
-      <a-image
-          preview={false}
-          src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-          style="width: 50%; height: 20px; "
-      />
+    <div class="full-height">
+      <a-carousel autoplay class="custom-carousel">
+        <div class="carousel-item">
+          <a-image
+              :preview="false"
+              class="carousel-image"
+              src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          />
+        </div>
+        <div class="carousel-item">
+          <h3>第二张轮播图</h3>
+        </div>
+        <div class="carousel-item">
+          <h3>第三张轮播图</h3>
+        </div>
+        <div class="carousel-item">
+          <h3>4</h3>
+        </div>
+      </a-carousel>
 
-      <div><h3>4</h3></div>
-    </a-carousel>
+      <a-list
+          :data-source="data"
+          item-layout="horizontal"
+      >
+        <template #renderItem="{ item }">
+          <a-list-item style="height: 100px">
+            <a-list-item-meta>
+              <template #description>
+                {{ item.description }}{{ item.key }}
+              </template>
 
-    <a-list
-        :data-source="data"
-        class="full-height-list"
-        item-layout="horizontal"
-    >
-      <template #renderItem="{ item }">
-        <a-list-item style="height: 100px">
-          <a-list-item-meta>
-            <template #description>
-              {{ item.description }}{{ item.key }}
-            </template>
-
-            <template #title>
-              <a href="https://www.antdv.com/">{{ item.title }}</a>
-            </template>
-            <template #avatar>
-              <a-avatar src="https://joeschmoe.io/api/v1/random"/>
-            </template>
-          </a-list-item-meta>
-        </a-list-item>
-      </template>
-    </a-list>
+              <template #title>
+                <a href="https://www.antdv.com/">{{ item.title }}</a>
+              </template>
+              <template #avatar>
+                <a-avatar src="https://joeschmoe.io/api/v1/random"/>
+              </template>
+            </a-list-item-meta>
+          </a-list-item>
+        </template>
+      </a-list>
+    </div>
   </div>
+
 </template>
 
 <script lang="ts" setup>
@@ -116,11 +127,36 @@ const data: DataItem[] = [
 .home-container {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* 占满视口高度 */
+  flex: 1;
+  overflow: hidden;
 }
 
-.full-height-list {
-  flex: 1; /* 让列表自动填充剩余空间 */
-  overflow-y: auto; /* 当内容超出时显示滚动条 */
+.full-height {
+  height: 100%;
+  overflow: auto;
 }
+
+.custom-carousel {
+  flex-shrink: 0;
+  height: 600px;
+  background: linear-gradient(135deg, #3498db, #1a5276);
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important;
+  display: block !important;
+}
+
 </style>

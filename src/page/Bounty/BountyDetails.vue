@@ -10,8 +10,8 @@
       </a-space>
       <div class="meta-info" style="word-wrap: break-word; word-break: break-all ">
         <a-card-meta
-            :description=bounty.description
-            :title=bounty.title
+            description="悬赏人信息：测试用户xxx"
+            title="悬赏人信息：测试用户xxx"
         />
       </div>
     </div>
@@ -59,10 +59,10 @@ interface Bounty {
 }
 
 const bounty = ref<Bounty>({
-  title: '标题',
-  description: 'uuygbhyugby7gbb78iguygggggygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygygyy',
+  title: '修复前端登录页面响应式布局问题',
+  description: '在移动设备上登录页面显示异常，需要优化CSS使其在不同尺寸的设备上都能正常显示',
   bountyId: '123',
-  imagesUrl: ['https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png', 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png', 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png']
+  imagesUrl: ['https://xsgames.co/randomusers/avatar.php?g=pixel&key=1', 'https://xsgames.co/randomusers/avatar.php?g=pixel&key=1', 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png']
 });
 </script>
 

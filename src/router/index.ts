@@ -39,6 +39,12 @@ const router = createRouter({
                             path: "publish",
                             component: () => import("@/page/Bounty/BountyPublish.vue")
                         }, {
+                            path: "detail",
+                            component: () => import("@/page/Bounty/BountyDetails.vue"),
+                        }, {
+                            path: "chat",
+                            component: () => import("@/page/Bounty/BountyChat.vue"),
+                        }, {
                             path: "my",
                             children: [{
                                 path: "myOrder",
