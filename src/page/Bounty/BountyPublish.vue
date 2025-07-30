@@ -55,7 +55,7 @@
       </a-upload>
 
       <a-button type="primary" @click="publish">
-        点击发布悬赏发布
+        发布悬赏
       </a-button>
     </a-space>
   </a-card>

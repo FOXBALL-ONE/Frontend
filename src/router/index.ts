@@ -27,6 +27,9 @@ const router = createRouter({
                         requiresAuth: true // 需要登录才能访问
                     },
                 }, {
+                    path: "news",
+                    component: () => import("@/page/Home/News.vue"),
+                }, {
                     path: "bounty",
                     children: [
                         {
@@ -44,7 +47,8 @@ const router = createRouter({
                         }, {
                             path: "chat",
                             component: () => import("@/page/Bounty/BountyChat.vue"),
-                        }, {
+                        },
+                        {
                             path: "my",
                             children: [{
                                 path: "myOrder",
@@ -68,7 +72,16 @@ const router = createRouter({
                         }, {
                             path: "publish",
                             component: () => import("@/page/SecondHand/SecondHandPublish.vue")
+                        },
+                        {
+                            path: "detail",
+                            component: () => import("@/page/SecondHand/SecondHandDetails.vue")
                         }, {
+                            path: "orderDetail",
+                            component: () => import("@/page/SecondHand/SecondHandOrderDetail.vue")
+                        },
+
+                        {
                             path: "my",
                             children: [{
                                 path: "myorder",

@@ -13,6 +13,10 @@
     </a-space>
   </a-card>
   <a-card>
+    <div style="margin-bottom: 16px; font-size: 16px; font-weight: bold;">
+      当前显示: {{ currentStatus === 'all' ? '所有订单' : currentStatus === 'unpaid' ? '未支付订单' : '已支付订单' }}
+    </div>
+
     <a-list
         :data-source="data"
         class="full-height-list"
@@ -54,6 +58,7 @@ interface DataItem {
   amount: number;
   createTime: string;
 }
+
 
 const data = ref<DataItem[]>([
   {

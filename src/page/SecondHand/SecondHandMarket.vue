@@ -129,8 +129,6 @@
         <template #description>www.instagram.com</template>
       </a-card-meta>
     </a-card>
-
-
   </a-space>
 </template>
 

@@ -2,36 +2,39 @@
   <a-card style="display: flex; justify-content: center;">
     <a-space direction="horizontal">
       <a-button type="primary" @click="$router.push('/bounty/publish')">
-        所有发布的悬赏
+        所有发布的二手物品
       </a-button>
       <a-button type="primary" @click="$router.push('/bounty/publish')">
-        未支付的悬赏
+        未支付的物品订单
       </a-button>
       <a-button type="primary" @click="$router.push('/bounty/publish')">
-        已完成的悬赏
+        已完成的物品订单
       </a-button>
     </a-space>
   </a-card>
-  <a-list
-      :data-source="data"
-      class="full-height-list"
-      item-layout="horizontal"
-  >
-    <template #renderItem="{ item }">
-      <a-list-item style="height: 100px">
-        <a-list-item-meta>
-          <template #description>
-            {{ item.description }}{{ item.key }}
-          </template>
+  <a-card>
+    当前页面展示的二手物品为：所有发布的二手物品
+    <a-list
+        :data-source="data"
+        class="full-height-list"
+        item-layout="horizontal"
+    >
+      <template #renderItem="{ item }">
+        <a-list-item style="height: 100px">
+          <a-list-item-meta>
+            <template #description>
+              {{ item.description }}{{ item.key }}
+            </template>
 
-          <template #title>
-            <a href="https://www.antdv.com/">{{ item.title }}</a>
-          </template>
+            <template #title>
+              <a href="https://www.antdv.com/">{{ item.title }}</a>
+            </template>
 
-        </a-list-item-meta>
-      </a-list-item>
-    </template>
-  </a-list>
+          </a-list-item-meta>
+        </a-list-item>
+      </template>
+    </a-list>
+  </a-card>
 </template>
 <script lang="ts" setup>
 interface DataItem {
@@ -43,58 +46,58 @@ interface DataItem {
 const data: DataItem[] = [
   {
     key: 1,
-    title: '急招算法工程师',
-    description: '寻找熟悉机器学习算法的工程师，协助开发图像识别系统',
+    title: '二手iPhone 13',
+    description: '使用9成新，无划痕，配件齐全，原装充电器和耳机',
   },
   {
     key: 2,
-    title: '前端页面重构',
-    description: '需要对电商网站首页进行重构，提高用户体验和加载速度',
+    title: '二手MacBook Pro 2021',
+    description: '轻度使用，M1芯片，16GB内存，512GB存储，原装包装',
   },
   {
     key: 3,
-    title: '微信小程序开发',
-    description: '开发一个社区团购类小程序，要求有良好的用户界面和稳定性',
+    title: '索尼PS5游戏机',
+    description: '购买半年，成色新，送两个手柄和三款游戏光盘',
   },
   {
     key: 4,
-    title: '数据库性能优化',
-    description: '对现有MySQL数据库进行性能优化，解决高并发查询缓慢问题',
+    title: '尼康D850单反相机',
+    description: '专业摄影师使用，附送24-70mm镜头，快门数不到5000',
   },
   {
     key: 5,
-    title: 'App测试需求',
-    description: '需要专业测试人员对Android和iOS应用进行全面功能和兼容性测试',
+    title: '小米平衡车',
+    description: '孩子玩过几次，几乎全新，电池续航能力良好',
   },
   {
     key: 6,
-    title: '网站安全审计',
-    description: '对公司网站进行全面安全审计，发现并修复潜在的安全漏洞',
+    title: '大学教材全套',
+    description: '计算机专业教材，包含数据结构、操作系统、计算机网络等',
   },
   {
     key: 7,
-    title: '后端API开发',
-    description: '使用Node.js开发RESTful API，对接移动端和Web前端应用',
+    title: '宜家书桌',
+    description: '使用一年，无明显磨损，可自取，尺寸120x60cm',
   },
   {
     key: 8,
-    title: '桌面应用程序修复',
-    description: '修复Windows桌面应用程序的若干bug，优化用户体验',
+    title: 'Nintendo Switch游戏机',
+    description: '国行版本，保修期内，带马里奥赛车和塞尔达传说',
   },
   {
     key: 9,
-    title: '网络爬虫开发',
-    description: '开发一个高效稳定的爬虫，采集特定网站的商品价格信息',
+    title: '小米空气净化器',
+    description: '去年购入，滤芯刚更换不久，适合小户型使用',
   },
   {
     key: 10,
-    title: '数据可视化面板',
-    description: '使用Echarts开发销售数据可视化面板，支持多种图表展示方式',
+    title: 'iPad Pro 2022',
+    description: '128GB WiFi版，带原装笔和键盘，保修还有8个月',
   },
   {
     key: 11,
-    title: '服务器维护任务',
-    description: '需要对Linux服务器进行维护，优化性能并升级安全补丁',
+    title: '哑铃健身套装',
+    description: '可调节重量，5-40kg，搬家急售，自取优惠',
   },
 ];
 
